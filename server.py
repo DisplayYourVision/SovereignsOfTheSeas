@@ -1,5 +1,7 @@
 import socket
-import thread
+import threading
+
+print("boot...")
 
 PORT = 10000
 SERVER = socket.gethostbyname(socket.gethostname())
