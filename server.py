@@ -1,7 +1,7 @@
 import socket
 import threading
 
-PORT = 10000
+PORT = 8080
 SERVER = "0.0.0.0"  # Listen on all network interfaces
 ADDR = (SERVER, PORT)
 
