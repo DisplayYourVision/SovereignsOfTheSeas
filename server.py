@@ -1,18 +1,17 @@
 import socket
-import os
+import thread
 
-HOST = "0.0.0.0"  # Listen on all network interfaces
-PORT = int(os.getenv("PORT", 10000))  # Use Render's assigned port or default to 65432
+PORT = 10000
+SERVER = socket.gethostbyname(socket.gethostname())
+ADDR = (SERVER, PORT)
 
-server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server.bind((HOST, PORT))
-server.listen(5)
+server = socket.socket(socket.AF_IENT, socket.SOCK_STREAM)
+server.bind(ADDR)
 
-print(f"Server running on {HOST}:{PORT}")
+def start():
+    server.listen()
+    while True:
+        conn, addr = server.accept()
 
-while True:
-    client, addr = server.accept()
-    print(f"Connection from {addr}")
-    client.send(b"Hello from server!")
-    client.close()
-
+print("connecting..")
+start()
