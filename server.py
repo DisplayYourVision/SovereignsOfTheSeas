@@ -3,7 +3,7 @@ print("test")
 import socket
 import threading
 
-PORT = 5050
+PORT = 10000
 SERVER = "3.75.158.163"
 ADDR = (SERVER, PORT)
 
