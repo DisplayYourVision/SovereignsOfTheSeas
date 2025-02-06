@@ -13,7 +13,6 @@ server.bind(ADDR)
 def client(conn, addr):
     print("new client")
     print(addr)
-
     conn.close()
 
 def start():
@@ -23,7 +22,6 @@ def start():
         conn, addr = server.accept()
         thread = threading.Thread(target=client, args=(conn,addr))
         thread.start()
-        print(threading.active_count-1)
 
 
 print("Server is starting")
