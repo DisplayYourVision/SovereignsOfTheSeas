@@ -4,7 +4,7 @@ import socket
 import threading
 
 PORT = 10000
-SERVER = "3.75.158.163"
+SERVER = "3.125.183.140"
 ADDR = (SERVER, PORT)
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
