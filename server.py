@@ -1,7 +1,7 @@
 import asyncio
 import websockets
 
-PORT = 10000
+PORT = 8080
 HOST = "0.0.0.0"  # Listen on all network interfaces
 
 connected_clients = set()
